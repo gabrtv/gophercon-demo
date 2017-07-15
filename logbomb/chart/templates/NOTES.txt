@@ -1,0 +1,1 @@
+Log bomb detonated.  Use `kubectl logs -n {{ .Release.Namespace }} <pod-name>` to view output.

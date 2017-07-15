@@ -1,0 +1,3 @@
+/rootfs/opt/logbomb/sbin/logbomb
+/manifests/*.tmp.yaml
+vendor/

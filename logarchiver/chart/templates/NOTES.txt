@@ -1,0 +1,4 @@
+Logarchiver will place logs into the Minio bucket.
+
+Use `mc` to access with:
+mc ls {{ .Values.minio.endpoint }}/{{ .Values.minio.bucketName }}

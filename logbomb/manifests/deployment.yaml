@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: logbomb
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: logbomb
+    spec:
+      containers:
+      - name: logbomb
+        image: gabrtv/logbomb:canary
+        imagePullPolicy: Always
+        env:
+        - name: GO_ROUTINES
+          value: {{ .Values.settings.goRoutines }}
+        - name: MESSAGES_PER_GO_ROUTINE
+          value: {{ .Values.settings.msgPerGoRoutine }}
+        - name: MIN_MESSAGE_WORDS
+          value: {{ .Values.settings.minWords }}
+        - name: MAX_MESSAGE_WORDS
+          value: {{ .Values.settings.maxWords }}
+        - name: LOG_WRITER_TYPE
+          value: {{ .Values.settings.writer }}
+        - name: NATS_URL
+          value: {{ .Values.nats.url }}
+        - name: NATS_TOPIC
+          value: {{ .Values.nats.topic }}       

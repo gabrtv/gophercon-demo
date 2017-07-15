@@ -1,0 +1,21 @@
+hash: aa6eba40cac620d844f334f96b84f25abb32a597a1e774b8529b213ee14fd75a
+updated: 2017-07-07T11:50:33.101772362-06:00
+imports:
+- name: github.com/drhodes/golorem
+  version: ecccc744c2d953a1e13cbe5e5fc5d4cbc9b8daeb
+- name: github.com/golang/snappy
+  version: 553a641470496b2327abcac10b36396bd98e45c9
+- name: github.com/kelseyhightower/envconfig
+  version: 70f0258d44cbaa3b6a2581d82f58da01a38e4de4
+- name: github.com/nats-io/go-nats
+  version: 61923ed1eaf8398000991fbbee2ef11ab5a5be0d
+- name: github.com/nats-io/nats
+  version: 0f25ebdb0f66fac3de939396a6eeb64d3cee23cd
+  subpackages:
+  - encoders/builtin
+  - util
+- name: github.com/nats-io/nuid
+  version: 3cf34f9fca4e88afa9da8eabd75e3326c9941b44
+- name: github.com/nsqio/go-nsq
+  version: 973bf9a2952ff7e38071ae8392b73e4418503059
+testImports: []

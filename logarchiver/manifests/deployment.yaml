@@ -1,0 +1,28 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: logarchiver
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: logarchiver
+    spec:
+      containers:
+      - name: logarchiver
+        image: gabrtv/logarchiver:canary
+        imagePullPolicy: Always
+        env:
+        - name: NATS_URL
+          value: "nats://nats-nats.default:4222"
+        - name: NATS_TOPIC
+          value: "logs"
+        - name: MINIO_ENDPOINT
+          value: "minio-minio.minio:9000"
+        - name: MINIO_ACCESS_KEY
+          value: "AKIAIOSFODNN7EXAMPLE"
+        - name: MINIO_SECRET_KEY
+          value: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+        - name: MINIO_BUCKET_NAME
+          value: "logarchiver"

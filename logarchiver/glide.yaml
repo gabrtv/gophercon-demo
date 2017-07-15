@@ -1,0 +1,8 @@
+package: github.com/gabrtv/logarchiver
+import:
+- package: github.com/kelseyhightower/envconfig
+  version: ^1.3.0
+- package: github.com/nats-io/go-nats
+  version: ^1.2.2
+- package: github.com/minio/minio-go
+  version: ^3.0.0
