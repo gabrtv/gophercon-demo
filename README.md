@@ -5,7 +5,8 @@ Demo of NATS + Minio running on Kubernetes given during GopherCon 2017 Community
 ## Prerequisites
 
  * Kubernetes 1.6+ with working `kubectl`
- * Minio is installed via:
+ * Helm 2.5+
+ * Minio installed via:
 
 ```
 helm install stable/minio --name minio --namespace minio --set mode=distributed
